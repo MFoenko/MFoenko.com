@@ -1,0 +1,17 @@
+.section{
+	margin:0px;
+	padding:0px;
+	border:none;
+}
+
+.section_header{
+
+}
+.section_header_title{
+	font: 30px Arial;
+	display:block;
+	line-height: 50px
+}
+.section_header_subtitle{
+	font: 20px Arial;
+}

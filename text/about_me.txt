@@ -1,0 +1,6 @@
+<h1>Hi. I'm Mikhail Foenko, but 90% of people call me Michael</h1>
+I am a Computer Engineering major at the City College of New York's Grove School of Engineering. I code during most of my free time. I usually tinker with new concepts, but occasionally write full programs to solve problems I encounter in my daily life. My preferred language is Java, but I can code in most popular languages, such as C++, PHP, and Python. I mostly code for Android, and have several apps published on Google Play as McHail.
+<br/>
+<br/>
+This site is meant to act as a more detailed look at who I am. Below you will find all kinds of information about who I am and what I do.
+

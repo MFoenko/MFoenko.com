@@ -1,0 +1,144 @@
+<script type="text/javascript">
+
+	var ITEM_EXPAND_HEIGHT = "200px";
+
+	function toggleItem(listItem, expandHeight){
+		var details = listItem.getElementsByClassName("item_details")[0];
+		if($(details).css("height") == "0px"){
+			$(details).css("display","block")
+			$(details).animate({
+		    height: expandHeight + "px"
+		  	}, 500, function() {});
+		}else{
+			$(details).animate({
+		    height: "0px"
+		 	 }, 500, function(){$(details).css("display","none")});
+		}
+onScroll();
+	}
+	function collapseAll(){
+		var items = document.getElementsByTagName("li");
+		for(var i=0; i<items.length;i++){
+			var details = items[i].getElementsByClassName("item_details")[0];
+			$(details).animate({
+			   height: "0px"
+			 }, 500, function() {$(details).css("display","none")});
+	onScroll();
+		}
+	}
+	collapseAll();
+</script>
+<ul>
+<!--
+	Dropdown Template
+	<li class="item">
+		<div onclick="toggleItem(this.parentNode, 600)" class="item_header">
+			<span class="item_header_title">Title</span>
+			<span class="item_header_subtitle">Subtitle</span>
+		</div>
+		<div class="item_details">
+			Details
+		</div>
+	</li>
+-->
+
+	<h4>Projects</h4>
+	<h5>Here's some of my work. Click on an item to expand it </h5>
+	<li class="item">
+		<div onclick="toggleItem(this.parentNode, 650)" class="item_header">
+			<span class="item_header_title">QR Assassin</span>
+			<span class="item_header_subtitle">QR Assassin takes the classic game of Assassin and makes it high-tech</span>
+		</div>
+		<div class="item_details">
+		<span class="item_preview">
+		<iframe style="float:left; margin: 5px" width="280" height="160" src="//www.youtube.com/embed/hDX_R-IwVTk" frameborder="0" allowfullscreen></iframe>
+		</span>
+	<a href="qrassassin.co.nr">QRAssassin.co.nr</a><br/>
+			QR Assassin is a game based off of the campus game Assassin. <br/>
+			In the original game, a Game Master (GM) gathers the names (and, optionally, the payments) of participants. The GM writes down the names of each participants on seperate sheets of paper, and hands the names back out to the players. Each player must then hunt down the person whose name they are given and "assassinate" them (not literally), ussually by marking them with a sharpie. The assassinated player is eliminated and must give their assassin the name that they recieved. The assassin now hunts the new name. The games continues until one person remains.<br/>
+			<br/>
+			Because of the long-term and geographically spread out nature of the game, administrating a game of Assassin proves challanging. One challenge is administering names in a way ordered enough that a player does not recieve their own name until they are the last player standing, but random enough so that other players cannot predict whose name they will recieve before play starts. Another problem is keeping track of who is still playing. Another, very debilitating problem is that not everyone owns a sharpie, or whatever the declared weapon may be.
+			<br/>
+			<br/>
+			QR Assassin was my response to the unmanageable nature of the game. QR Assassin itself is a web app that allows the GM to manage the game and gives players a new, more challenging way to assassinate others. Players register for a game on the QR Assassin website. They are then given a personalized QR Code that they can print out at any time. Players must wear this code at all times. When the game starts, players are automatically assigned their targets. Their assassin scans the code to seemlessly assassinate their target and recieve the next target. Players without a fancy smartphone can text message the string of characters under the QR code to a special phone number to assassinate players and recieve their targets. Players can check their target at any time. The website also features a log visible to all players that details the exact time players were killed.
+			<br/>
+			<br/>
+QR Assassin was imagined during a discussion with classmates about better ways to assassinate players. Our high school was playing a game of assassin, and many players were complaining that Sharpies were dirty, and could stain clothing. Our solution was QR Codes, which we immediately set out to implement. After several weeks, the app was in working condition and I hosted my own game of QR Assassin, which was small, but successful. The app has been idle since.
+
+			The text messaging service was concieved and coded by <a href="http://www.kevinbaichoo.com">Kevin Baichoo</a>
+		</div>
+	</li>
+	<li class="item">
+		<div onclick="toggleItem(this.parentNode, 600)" class="item_header">
+			<span class="item_header_title">Check</span>
+			<span class="item_header_subtitle">Check keeps track of chips/points/cash for turn-based card games</span>
+		</div>
+		<div class="item_details">
+<span class="item_preview">
+	<img src="images/Check1.png">
+	<img src="images/Check2.png">
+</span>
+<a href="https://play.google.com/store/apps/details?id=com.mikhail.check">Check on Google Play</a> 			<br/>
+			Check is an app made to keep track of bets in Texas Hold 'Em Poker and other casino card games. It uses a system persistent accounts, so that the host of poker games can easily set up games. 
+			<br/>
+			<br/>
+Before actually playing, the user must set up accounts for all players. Accounts hold the players' name, chips, and (optionally) image. These accounts only need to be set up once as long as the app data is intact. Any of the information can be changed after creation. 
+			<br/>
+			<br/>
+After setup, the user can initiate a game. After selecting the players who will be in the game, the user presses buttons to raise, call, fold, or payout as these events happen in the game. The app keeps track of who has how many chips and how many chips are in the pot. When the game is over, the user simply leaves the screen. The next time the user starts a game, the players will have the same chips as the end of the last game (unless the user manually changed the values)
+			<br/>
+			<br/>
+Check came about as a way to play Texas Hold 'Em without gambling money. During my senior year in high school, Hold 'Em became very popular. My friend and I wanted to play, but didn't want to gamble. I suggested we gamble with "Friendship Points", an imaginary currency worth absolutely nothing. We kept track of our first game on a napkin. After seeing our point keeper struggle keeping track of who lost what and who won what with a column for each player and a varying amount of rows based on who folded or left the game at which point. I was taking an online course on Android and suggested that I could write an app to keep track of points. I wrote a rough version of the app in two days, and constantly updated it to make it easier to use and more efficient. I still occasionally update and use the app.
+		</div>
+	</li>
+<li class="item">
+		<div onclick="toggleItem(this.parentNode, 300)" class="item_header">
+			<span class="item_header_title">Ultradex</span>
+			<span class="item_header_subtitle">Pokedex with beautiful graphics</span>
+		</div>
+		<div class="item_details">
+<span class="item_preview">
+	<img src="images/Ultradex1.png">
+	<img src="images/Ultradex2.png">
+</span>
+<a href="files/Ultradex.apk">Download Ultradex.apk</a><br>
+			Ultradex is arguably the best looking Pokedex app for android. It displays stats for the 719 Pokemon of Pokemon X/Y and all of their forms and moved. Ultradex features 3D animated sprites for all Pokemon and their forms, sorting and filtering, and landscape compatibility. 
+
+
+Unfortunately, the graphics inflate the apps apk to 72MB making it incompatible with Google Play. Since writing this app, I've lost interest in Pokémon, and lost the source code to the app, so I cannot easily fix the app to be compatible with Google Play or update it to include information for newer Pokemon games.
+		</div>
+	</li>
+
+	<li class="item">
+		<div onclick="toggleItem(this.parentNode, 200)" class="item_header">
+			<span class="item_header_title">snApple Watch</span>
+			<span class="item_header_subtitle">My response to the smartwatch craze</span>
+		</div>
+		<div class="item_details">
+			<span class="item_preview">
+				<img src="images/SnappleWatch1.png"/>
+			</span>
+			The snApple Watch is a one of a kind watch designed to tell the time and keep USB storage on hand at all times. The watch consists of a digital display packed into a Snapple cap with twine, attached to a 1GB USB flash drive wristband with duct tape.
+			<br/>
+			<br/>
+The watch started off as a joke, with a spec list including "flamable", but has since become my regular watch.
+		</div>
+	</li>
+	<li class="item">
+		<div onclick="toggleItem(this.parentNode, 300)" class="item_header">
+			<span class="item_header_title">Asteroids</span>
+			<span class="item_header_subtitle">Simple game about a lone spaceships futile struggle to escape an asteroid belt</span>
+		</div>
+		<div class="item_details">
+<span class="item_preview">
+<img src="images/Asteroids1.png">
+<img src="images/Asteroids2.png">
+</span>
+<a href="https://play.google.com/store/apps/details?id=com.mikhail.asteroids">Asteroids on Google Play</a><br/>
+			Asteroids is a simple game whose goal is to get the highest score possible by avoiding incoming asteroids. The asteroids appear more frequently as the game progresses and collide, making their flight paths more difficult to predict over time.
+			<br/>
+			<br/>
+Asteroids is my go-to "hello world" program, I always try to write a version of it when I learn to code on a new platform. This version was created for libGdx, an API designed to easily deploy games to multiple platforms. I am currently working on a more complex game based around the same mechanics.
+		</div>
+	</li>
+</ul>

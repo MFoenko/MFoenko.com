@@ -1,0 +1,46 @@
+<script type="text/javascript">
+
+	var ITEM_EXPAND_HEIGHT = "200px";
+
+	function toggleItem(listItem){
+		var details = listItem.getElementsByClassName("item_details")[0];
+		if($(details).css("height") == "0px"){
+			$(details).css("display","block")
+			$(details).animate({
+		    height: ITEM_EXPAND_HEIGHT
+		  	}, 500, function() {});
+		}else{
+			$(details).animate({
+		    height: "0px"
+		 	 }, 500, function(){$(details).css("display","none")});
+		}
+		
+	}
+	function collapseAll(){
+		var items = document.getElementsByTagName("li");
+		for(var i=0; i<items.length;i++){
+			var details = listItem.getElementsByClassName("item_details")[0];
+			$(details).animate({
+			   height: "0px"
+			 }, 500, function() {$(details).css("display","none")});
+	
+		}
+	}
+	collapseAll();
+</script>
+<ul class="item">
+	<h4>Skills</h4>
+	<h5>Here are some of my skills. Click on an item to expand it </h5>
+	<li class="item_item">
+		<div onclick="toggleItem(this.parentNode)" class="item_header_title">
+			Java
+		</div>
+		<div class="item_details">
+			
+		</div>
+	</li>
+
+
+
+
+</ul>
